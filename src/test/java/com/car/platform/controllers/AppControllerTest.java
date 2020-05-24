@@ -119,7 +119,7 @@ public class AppControllerTest {
 
         when(listingService.searchByQueryParameter("volks")).thenReturn(listings);
 
-        mvc.perform(get("/search?fullQuery=volks")
+        mvc.perform(get("/search?query=volks")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))

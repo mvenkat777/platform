@@ -119,7 +119,7 @@ public class AppController {
      * @return 
      */
    @GetMapping("/search")
-    public ResponseEntity showAllListing(@RequestParam(value = "fullQuery", required = false) String query) {
+    public ResponseEntity showAllListing(@RequestParam(value = "query", required = false) String query) {
         if (null == query)
             return ResponseEntity.ok(listingService.getAllListings());
         else
